@@ -39,4 +39,4 @@ steps:
         helm template ./k8s/demo/ | kubeval
 
 images:
-  - ${_REGION}-docker.pkg.dev/$PROJECT_ID/demo/demo:$COMMIT_SHA
+  - us-west2-docker.pkg.dev/$PROJECT_ID/new-docker-repo/demo:$COMMIT_SHA
