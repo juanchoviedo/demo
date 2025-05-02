@@ -21,8 +21,11 @@ steps:
   - id: build-app
     dir: hello-cloudbuild-v2
     name: gcr.io/cloud-builders/docker
-    script: |
-    docker build -t us-west2-docker.pkg.dev/$PROJECT_ID/new-docker-repo/demo:$COMMIT_SHA
+    entrypoint: bash
+    args:
+     - -c
+      - |
+        docker build -t us-west2-docker.pkg.dev/$PROJECT_ID/new-docker-repo/demo:$COMMIT_SHA   
 
   - id: kubeval
     dir: hello-cloudbuild-v2
