@@ -25,7 +25,7 @@ steps:
     args:
       - -c
       - |
-        docker image build --tag us-west2-docker.pkg.dev/$PROJECT_ID/new-docker-repo/demo:$COMMIT_SHA   
+        docker image build --tag us-west2-docker.pkg.dev/$PROJECT_ID/new-docker-repo/demo:$COMMIT_SHA .   
 
   - id: kubeval
     dir: hello-cloudbuild-v2
