@@ -23,9 +23,9 @@ steps:
     name: gcr.io/cloud-builders/docker
     entrypoint: bash
     args:
-     - -c
+      - -c
       - |
-        docker build -t us-west2-docker.pkg.dev/$PROJECT_ID/new-docker-repo/demo:$COMMIT_SHA   
+        docker image build --tag us-west2-docker.pkg.dev/$PROJECT_ID/new-docker-repo/demo:$COMMIT_SHA   
 
   - id: kubeval
     dir: hello-cloudbuild-v2
